@@ -17,12 +17,10 @@ export class AppComponent {
     this.svc.printToConsole("Got The Servicess");
   }
 
-
-
  ngOnInit() {
-
- let obs =  this.http.get('https://api.github.com/users/melisamalala');
- obs.subscribe(() => console.log ('Got the response'));
+ //
+ // let obs =  this.http.get('https://api.github.com/users/melisamalala')
+ // obs.subscribe((response) => console.log(response));
 
 }
 

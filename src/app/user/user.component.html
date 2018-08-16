@@ -1,3 +1,8 @@
-<p>
-  user works!
-</p>
+User name: <input type="text" [(ngModel)]="userName">
+<button (click)="search()">Search</button>
+
+<p>Login name: {{response.login}}</p>
+<p>Number Of Repos: {{response.public_repos}}</p>
+<p>Profile Picture <img src="{{response.avatar_url}}"></p>
+<p>Number Of Gists: {{response.public_gists}}</p>
+<p>Number Of Followers: {{response.followers}}</p>
