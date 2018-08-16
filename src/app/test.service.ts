@@ -5,5 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class TestService {
 
+  printToConsole(arg) {
+    console.log(arg);
+  }
+
   constructor() { }
 }
