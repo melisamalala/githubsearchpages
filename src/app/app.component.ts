@@ -12,5 +12,6 @@ export class AppComponent {
 
 
   constructor(svc: TestService) {
+    svc.printToConsole("Got The Service")
   }
 }
