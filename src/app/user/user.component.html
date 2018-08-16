@@ -1,8 +1,43 @@
-User name: <input type="text" [(ngModel)]="userName">
-<button (click)="search()">Search</button>
+<!-- User name: <input type="text" [(ngModel)]="userName">
+<button (click)="search()">Search</button> -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Github</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<p>Login name: {{response.login}}</p>
-<p>Number Of Repos: {{response.public_repos}}</p>
-<p>Profile Picture <img src="{{response.avatar_url}}"></p>
-<p>Number Of Gists: {{response.public_gists}}</p>
-<p>Number Of Followers: {{response.followers}}</p>
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Github Home <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">GitHub Repos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Github Users</a>
+      </li>
+    </ul>
+
+
+    User name: <input type="text" [(ngModel)]="userName">
+    <button (click)="search()">Search</button>
+
+    <!-- <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form> -->
+  </div>
+</nav>
+
+
+
+<div *ngIf="response">
+
+  <p>Login name: {{response.login}}</p>
+  <p>Number Of Repos: {{response.public_repos}}</p>
+  <p>Profile Picture <img src="{{response.avatar_url}}"></p>
+  <p>Number Of Gists: {{response.public_gists}}</p>
+  <p>Number Of Followers: {{response.followers}}</p>
+</div>
