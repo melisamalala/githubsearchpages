@@ -14,7 +14,7 @@ export class AppComponent {
 
 
   constructor(private svc: TestService, http: HttpClient) {
-    this.svc.printToConsole("Got The Servicess");
+    this.svc.printToConsole('Got The Servicess');
   }
 
  ngOnInit() {

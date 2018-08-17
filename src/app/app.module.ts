@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-const routes:Routes = [
-  {path:"user",component: UserComponent},
-  {path:"repository",component: RepositoryComponent};
-  {path:'**',component: NotFoundComponent}
-]
+const routes: Routes = [
+  {path: 'user', component: UserComponent},
+  {path: 'repository', component: RepositoryComponent},
+  {path:  '', redirectTo: '/user', pathMatch: 'full'},
+  {path: '**', component: NotFoundComponent}
+];
+
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { RepositoryComponent } from './repository/repository.component';
