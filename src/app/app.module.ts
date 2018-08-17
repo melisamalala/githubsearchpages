@@ -19,7 +19,8 @@ import { RepositoryComponent } from './repository/repository.component';
 import { TestService } from './test.service';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import {RoutingModule} from './routing/routing.module'
+import {RoutingModule} from './routing/routing.module';
+import { DateCountPipe } from './date-count.pipe'
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import {RoutingModule} from './routing/routing.module'
     RepositoryComponent,
     AboutComponent,
     NotFoundComponent,
+    DateCountPipe,
   ],
   imports: [
     BrowserModule,
