@@ -9,9 +9,9 @@ export class TestService {
 
   url: string = 'https://api.github.com/users/';
   private userName: string = [] ;
-  // response: any;
+  response: any;
   // reporesponse: any;
-  private apiKey: string = 'environment.apiKey';
+  private apiKey: string = environment.apiKey;
   // repoName: string = [];
 
   // printToConsole(arg) {
@@ -27,6 +27,7 @@ this.userName = 'melisamalala';
 
      search() {
       return this.http.get( this.url + this.userName + '?accesstoken=' + this.apiKey);
+      this.response = response;
      }
 
 
