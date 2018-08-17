@@ -25,7 +25,6 @@
   </div>
 </nav>
 
-
 <div class="jumbotron">
   <div *ngIf="response">
     <h1 class="display-3"> Username: {{response.login}} </h1>
@@ -42,32 +41,96 @@
         Number Of Followings: {{response.following}}
         <span class="badge badge-primary badge-pill">Biography: {{response.bio}}</span>
       </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center"> Location: {{response.location}}
+        <span class="badge badge-primary badge-pill">1</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center"> Public Repos: {{response.public_repos}}
+        <span class="badge badge-primary badge-pill">1</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center"> Public Gists: {{response.public_gists}}
+        <span class="badge badge-primary badge-pill">1</span>
+      </li>
       <li class="list-group-item d-flex justify-content-between align-items-center">
-        Morbi leo risus
+        Available for hire: {{response.hireable}}
+        <span class="badge badge-primary badge-pill">1</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Name: {{response.name}}
+        <span class="badge badge-primary badge-pill">1</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Email: {{response.email}}
         <span class="badge badge-primary badge-pill">1</span>
       </li>
     </ul>
 
-    <hr class="my-4">
-    <p>Available for hire: {{response.hireable}}</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Location: {{response.location}}</a>
-    </p>
-
-    <!-- <p> Login name: {{response.login}} </p> -->
-    <p>Number Of Repos: {{response.public_repos}}</p>
-    <!-- <p>Profile Picture <img src="{{response.avatar_url}}"></p> -->
-    <p>Number Of Gists: {{response.public_gists}}</p>
-    <p></p>
-    <p>Name: {{response.name}}</p>
-    <p>Email: {{response.email}}</p>
-
-
-
     <div *ngFor="let repo of reporesponse, let i=index">
-
-      <p>{{reporesponse[i].name}}</p>
+      <div class="card border-primary mb-3" style="max-width: 80rem;">
+        <div class="card-header">{{reporesponse[i].name}}</div>
+        <div class="card-body">
+          <h4 class="card-title">Primary card title</h4>
+          <p class="card-text">{{reporesponse[i].description}}</p>
+        </div>
+      </div>
+      <div class="card border-secondary mb-3" style="max-width: 80rem;">
+        <div class="card-header">{{reporesponse[i].name}}</div>
+        <div class="card-body">
+          <h4 class="card-title">Secondary card title</h4>
+          <p class="card-text">{{reporesponse[i].description}}</p>
+        </div>
+      </div>
+      <div class="card border-success mb-3" style="max-width: 80rem;">
+        <div class="card-header">{{reporesponse[i].name}}</div>
+        <div class="card-body">
+          <h4 class="card-title">Success card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card border-danger mb-3" style="max-width: 80rem;">
+        <div class="card-header">{{reporesponse[i].name}}</div>
+        <div class="card-body">
+          <h4 class="card-title">Danger card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card border-warning mb-3" style="max-width: 80rem;">
+        <div class="card-header">{{reporesponse[i].name}}</div>
+        <div class="card-body">
+          <h4 class="card-title">Warning card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card border-info mb-3" style="max-width: 80rem;">
+        <div class="card-header">{{reporesponse[i].name}}</div>
+        <div class="card-body">
+          <h4 class="card-title">Info card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card border-light mb-3" style="max-width: 80rem;">
+        <div class="card-header">{{reporesponse[i].name}}</div>
+        <div class="card-body">
+          <h4 class="card-title">Light card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card border-dark mb-3" style="max-width: 80rem;">
+        <div class="card-header">{{reporesponse[i].name}}</div>
+        <div class="card-body">
+          <h4 class="card-title">Dark card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
     </div>
+
+
+
+
+
+
+
+
+
 
     <!--
     <p class="lead">
@@ -98,7 +161,6 @@
       </div>
     </div> -->
   </div>
-
 
   <div class="footer">
     <p> Created By Melissa Malala &#169; August 2018.</p>
