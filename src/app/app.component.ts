@@ -8,11 +8,9 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // I need TestService
   title = 'GITHUB REPLICA';
 
   constructor(private svc: TestService, http: HttpClient) {
-    // this.svc.printToConsole('Got The Servicess');
   }
 
  ngOnInit() {
