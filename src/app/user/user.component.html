@@ -62,9 +62,12 @@
     <p>Name: {{response.name}}</p>
     <p>Email: {{response.email}}</p>
 
-    <p>{{reporesponse.name}}</p>
 
 
+    <div *ngFor="let repo of reporesponse, let i=index">
+
+      <p>{{reporesponse[i].name}}</p>
+    </div>
 
     <!--
     <p class="lead">
