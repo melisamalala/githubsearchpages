@@ -24,6 +24,7 @@ export class UserComponent implements OnInit {
       .subscribe((response) => {
         this.response = response;
         console.log(this.response);
+        // console.log(response);
       });
     }
 }

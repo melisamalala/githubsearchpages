@@ -9,7 +9,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class AppComponent {
   // I need TestService
-  title = 'githubsearchpage';
+  title = 'GITHUB REPLICA';
 
 
 

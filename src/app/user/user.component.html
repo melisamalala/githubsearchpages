@@ -21,7 +21,7 @@
     </ul>
 
 
-    User name: <input type="text" [(ngModel)]="userName">
+    User name: <input type="text" placeholder="Enter Github Username" [(ngModel)]="userName">
     <button (click)="search()">Search</button>
 
     <!-- <form class="form-inline my-2 my-lg-0">
@@ -32,12 +32,46 @@
 </nav>
 
 
+<div class="jumbotron">
+  <div *ngIf="response">
+    <h1 class="display-3">Login name: {{response.login}} </h1>
+    <p class="lead">Profile Picture <img src="{{response.avatar_url}}"></p>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Company: {{response.company}}
+        <span class="badge badge-primary badge-pill">Number Of Followers: {{response.followers}}</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Number Of Followings: {{response.following}}
+        <span class="badge badge-primary badge-pill">Biography: {{response.bio}}</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Morbi leo risus
+        <span class="badge badge-primary badge-pill">1</span>
+      </li>
+    </ul>
 
-<div *ngIf="response">
 
-  <p>Login name: {{response.login}}</p>
-  <p>Number Of Repos: {{response.public_repos}}</p>
-  <p>Profile Picture <img src="{{response.avatar_url}}"></p>
-  <p>Number Of Gists: {{response.public_gists}}</p>
-  <p>Number Of Followers: {{response.followers}}</p>
+    <hr class="my-4">
+    <p>Available for hire: {{response.hireable}}</p>
+
+
+
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Location: {{response.location}}</a>
+    </p>
+    <!-- <p> Login name: {{response.login}} </p> -->
+    <p>Number Of Repos: {{response.public_repos}}</p>
+    <!-- <p>Profile Picture <img src="{{response.avatar_url}}"></p> -->
+    <p>Number Of Gists: {{response.public_gists}}</p>
+    <p></p>
+    <p>Name: {{response.name}}</p>
+    <p>Email: {{response.email}}</p>
+    <!-- <p>Available for hire: {{response.hireable}}</p> -->
+    <!-- <p>Company: {{response.company}}</p> -->
+    <!-- <p>Number Of Followers: {{response.followers}}</p> -->
+    <!-- <p>Number Of Followings: {{response.following}}</p> -->
+    <!-- <p>Biography: {{response.bio}}</p> -->
+
+  </div>
 </div>
