@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-const routes:Routes=[
-  {path:"goals",component:UserComponent},
-  {path:"about",component:RepositoryComponent};
+const routes:Routes = [
+  {path:"user",component: UserComponent},
+  {path:"repository",component: RepositoryComponent};
+  {path:'**',component: NotFoundComponent}
+]
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { RepositoryComponent } from './repository/repository.component';
 import { TestService } from './test.service';
 import { AboutComponent } from './about/about.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+
 
 @NgModule({
   declarations: [
@@ -18,6 +22,7 @@ import { AboutComponent } from './about/about.component';
     UserComponent,
     RepositoryComponent,
     AboutComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
