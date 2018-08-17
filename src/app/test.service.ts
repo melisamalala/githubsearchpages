@@ -36,4 +36,10 @@ this.userName = 'melisamalala';
  }
 
 
+newUser(userName:string){
+  this.userName= userName;
+}
+
+
+
 }

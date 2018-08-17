@@ -18,9 +18,10 @@ export class UserComponent implements OnInit {
   // repoName: string = [];
 
 
-  constructor ( public apiservice: TestService) {
+  constructor ( public apiservice: TestService) {}
 
-
+searchUser() {
+ this.apiservice.newUser(this.userName);
  this.apiservice.search().subscribe(response => {
   console.log(response);
   this.response = response;
@@ -31,8 +32,11 @@ this.apiservice.repoDisplay().subscribe(reporesponse => {
   this.reporesponse = reporesponse;
 });
 
-
 }
+
+
+
+
 ngOnInit() {
 }
     // repoDisplay() {
