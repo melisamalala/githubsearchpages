@@ -20,7 +20,7 @@ import { TestService } from './test.service';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {RoutingModule} from './routing/routing.module';
-import { DateCountPipe } from './date-count.pipe'
+import { DateCountPipe } from './date-count.pipe';
 
 
 @NgModule({

@@ -20,22 +20,19 @@
       </li>
     </ul>
 
-
     User name: <input type="text" placeholder="Enter Github Username" [(ngModel)]="userName">
     <button (click)="search()">Search</button>
-
-    <!-- <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-    </form> -->
   </div>
 </nav>
 
 
 <div class="jumbotron">
   <div *ngIf="response">
-    <h1 class="display-3">Login name: {{response.login}} </h1>
-    <p class="lead">Profile Picture <img src="{{response.avatar_url}}"></p>
+    <h1 class="display-3"> Username: {{response.login}} </h1>
+    <p class="lead">Profile Picture
+      <br>
+      <br>
+      <img src="{{response.avatar_url}}"></p>
     <ul class="list-group">
       <li class="list-group-item d-flex justify-content-between align-items-center">
         Company: {{response.company}}
@@ -51,15 +48,12 @@
       </li>
     </ul>
 
-
     <hr class="my-4">
     <p>Available for hire: {{response.hireable}}</p>
-
-
-
     <p class="lead">
       <a class="btn btn-primary btn-lg" href="#" role="button">Location: {{response.location}}</a>
     </p>
+
     <!-- <p> Login name: {{response.login}} </p> -->
     <p>Number Of Repos: {{response.public_repos}}</p>
     <!-- <p>Profile Picture <img src="{{response.avatar_url}}"></p> -->
@@ -67,24 +61,43 @@
     <p></p>
     <p>Name: {{response.name}}</p>
     <p>Email: {{response.email}}</p>
-    <!-- <p>Available for hire: {{response.hireable}}</p> -->
-    <!-- <p>Company: {{response.company}}</p> -->
-    <!-- <p>Number Of Followers: {{response.followers}}</p> -->
-    <!-- <p>Number Of Followings: {{response.following}}</p> -->
-    <!-- <p>Biography: {{response.bio}}</p> -->
 
+    <p>{{reporesponse.name}}</p>
+
+
+
+    <!--
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Repository: {{response.repos_url}}</a>
+    </p> -->
+
+
+    <!-- <div class="container">
+      <h3 style='color: rgba(0,0,0,0.6)'>View Repositories</h3> Repositories: <input type="text" placeholder="Enter Name Of Repository" [(ngModel)]="repoName">
+      <button (click)="searchrepo()">Search Repository</button>
+      <hr>
+      <div *ngFor="let repo of repos">
+        <div class="row">
+          <div class="col-md-12">
+            <h4 style="color: deepskyblue;">
+            <a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a>
+          </h4>
+            <p class="badge badge-warning">Description</p>
+            <p>{{repo.description}}</p>
+          </div>
+          <div class="col-md-12">
+            <p class="badge badge-info">{{repo.watchers}} Watchers</p>
+            <p class="badge badge-success">{{repo.forks}} Forks</p>
+            <p class="badge badge-secondary">{{repo.stargazers_count}} Stars</p>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+
+
+  <div class="footer">
+    <p> Created By Melissa Malala &#169; August 2018.</p>
   </div>
 </div>
-
-<!-- appStrikethrough -->
-<!-- complete|date|uppercase -->
-<!--
-<div class="container">
-  <div class="row" *ngFor="let response of responses;let i = 'index'">
-
-    <h4 id="{{i}}">{{response.login}} due on {{response.email}}</h4>
-    <button class="btn btn-primary" (click)=goToUrl(response.id)>View Details</button>
-    <button class="btn btn-danger" (click)='deleteResponse(i)'> Delete Goal </button>
-  </div>
-
-</div> -->

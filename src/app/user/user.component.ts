@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TestService } from '../test.service';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../environment.ts';
-
 
 @Component({
   selector: 'app-user',
@@ -11,23 +10,36 @@ import {environment} from '../environment.ts';
 })
 export class UserComponent implements OnInit {
 
-  userName: string = '';
+  // url: string = 'https://api.github.com/users/';
+  userName: string = [] ;
   response: any;
-  apiKey: string = 'environment.apiKey';
-  // private apiKey: 'd89d799ae5a23fbb8a58f122e9242fd734b8b1e5';
+  reporesponse: any;
+  // apiKey: string = 'environment.apiKey';
+  // repoName: string = [];
 
-  constructor (private http: HttpClient) {
-  }
 
-  ngOnInit() {
+  constructor ( public apiservice: TestService) {
+
+
+ this.apiservice.search().subscribe(response => {
+  console.log(response);
+  this.response = response;
+});
+
+this.apiservice.repoDisplay().subscribe(reporesponse => {
+  console.log(reporesponse);
+  this.reporesponse = reporesponse;
+});
+
+
 }
-
-    search() {
-      this.http.get('https://api.github.com/users/' + this.userName + '?accesstoken' + this.apiKey)
-      .subscribe((response) => {
-        this.response = response;
-        console.log(this.response);
-        // console.log(response);
-      });
-    }
+ngOnInit() {
+}
+    // repoDisplay() {
+    //   this.http.get( this.url + this.userName + '/repos?accesstoken=' + this.apiKey)
+    //   .subscribe((reporesponse) => {
+    //     this.reporesponse = reporesponse;
+    //     console.log(this.reporesponse);
+    //   });
+    // }
 }
