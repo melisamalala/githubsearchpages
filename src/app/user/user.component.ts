@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TestService } from '../test.service';
 import {HttpClient} from '@angular/common/http';
+import {environment} from '../environment.ts';
 
 
 @Component({
@@ -12,6 +13,8 @@ export class UserComponent implements OnInit {
 
   userName: string = '';
   response: any;
+  apiKey: string = 'environment.apiKey';
+  // private apiKey: 'd89d799ae5a23fbb8a58f122e9242fd734b8b1e5';
 
   constructor (private http: HttpClient) {
   }
@@ -20,7 +23,7 @@ export class UserComponent implements OnInit {
 }
 
     search() {
-      this.http.get('https://api.github.com/users/' + this.userName)
+      this.http.get('https://api.github.com/users/' + this.userName + '?accesstoken' + this.apiKey)
       .subscribe((response) => {
         this.response = response;
         console.log(this.response);
