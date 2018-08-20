@@ -22,6 +22,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import {RoutingModule} from './routing/routing.module';
 import { DateCountPipe } from './date-count.pipe';
 import { HighlightDirective } from './highlight.directive';
+import { UppercasePipe } from './uppercase.pipe';
 // import { ReversePipe } from './reverse.pipe';
 
 
@@ -34,6 +35,7 @@ import { HighlightDirective } from './highlight.directive';
     NotFoundComponent,
     DateCountPipe,
     HighlightDirective,
+    UppercasePipe,
     // ReversePipe,
   ],
   imports: [

@@ -48,30 +48,30 @@
         <span class="badge badge-primary badge-pill">1</span>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center"> Public Repos: {{response.public_repos}}
-        <span class="badge badge-primary badge-pill">1</span>
+        <span class="badge badge-primary badge-pill">View Repositories</span>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center"> Public Gists: {{response.public_gists}}
         <span class="badge badge-primary badge-pill">1</span>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center">
         Available for hire: {{response.hireable}}
-        <span class="badge badge-primary badge-pill">1</span>
+        <span class="badge badge-primary badge-pill">Yes</span>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center" *ngIf="response.name">
-        Name: {{response.name}}
-        <span class="badge badge-primary badge-pill">1</span>
+        Name: {{response.name | uppercase}}
+        <span class="badge badge-primary badge-pill">Click To See Profile</span>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center" *ngIf="response.email">
         Email: {{response.email}}
-        <span class="badge badge-primary badge-pill">1</span>
+        <span class="badge badge-primary badge-pill">Contact Melissa</span>
       </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center" *ngIf="response.email">
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngIf="response.created_at">
         Created at {{response.created_at}}
-        <span class="badge badge-primary badge-pill">1</span>
+        <span class="badge badge-primary badge-pill">June 2014</span>
       </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center" *ngIf="response.email">
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngIf="response.updated_at">
         Created at {{response.updated_at}}
-        <span class="badge badge-primary badge-pill">1</span>
+        <span class="badge badge-primary badge-pill">August 2018</span>
       </li>
 
     </ul>
