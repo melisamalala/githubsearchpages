@@ -7,7 +7,7 @@ This is an Angular app which utiliSes the Github api to retrieve, search and dis
 
 #Live Link
 
-You can view my live link here:
+You can view my live link here: https://melisamalala.github.io/githubsearchpages
 
 
 This project was generated with Angular CLI version 1.7.4.
