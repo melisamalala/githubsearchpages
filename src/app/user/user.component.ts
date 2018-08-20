@@ -11,9 +11,10 @@ import {environment} from '../environment.ts';
 export class UserComponent implements OnInit {
 
   // url: string = 'https://api.github.com/users/';
-  userName: string = [] ;
-  response: any;
-  reporesponse: any;
+  userName: string ;
+  // newRepo: string = [];
+  response;
+  reporesponse;
   // apiKey: string = 'environment.apiKey';
   // repoName: string = [];
 
@@ -26,6 +27,13 @@ searchUser() {
   console.log(response);
   this.response = response;
 });
+
+// searchRepo()
+
+
+
+
+
 
 this.apiservice.repoDisplay().subscribe(reporesponse => {
   console.log(reporesponse);

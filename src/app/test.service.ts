@@ -22,7 +22,6 @@ export class TestService {
 console.log('hi');
 this.userName = 'melisamalala';
 
-
  }
 
      search() {
@@ -34,7 +33,6 @@ this.userName = 'melisamalala';
  repoDisplay() {
   return this.http.get( this.url + this.userName + '/repos?accesstoken=' + this.apiKey);
  }
-
 
 newUser(userName:string){
   this.userName= userName;

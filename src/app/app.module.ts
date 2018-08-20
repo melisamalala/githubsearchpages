@@ -21,6 +21,7 @@ import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {RoutingModule} from './routing/routing.module';
 import { DateCountPipe } from './date-count.pipe';
+// import { ReversePipe } from './reverse.pipe';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { DateCountPipe } from './date-count.pipe';
     AboutComponent,
     NotFoundComponent,
     DateCountPipe,
+    // ReversePipe,
   ],
   imports: [
     BrowserModule,

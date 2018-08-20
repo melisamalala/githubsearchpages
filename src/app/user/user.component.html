@@ -1,5 +1,3 @@
-<!-- User name: <input type="text" [(ngModel)]="userName">
-<button (click)="search()">Search</button> -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">Github</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,10 +17,6 @@
         <a class="nav-link" href="#">About Github Users</a>
       </li>
     </ul>
-
-    <!-- User name: <input type="text" placeholder="Enter Github Username" [(ngModel)]="userName">
-    <! <button (click)="search()">Search</button> -->
-    <!-- <button (click)="search()">Search</button> -->-->
   </div>
 </nav>
 
@@ -37,10 +31,8 @@
 
 
 
-
   </form>
 </div>
-
 
 
 <div class="jumbotron">
@@ -72,7 +64,7 @@
         Available for hire: {{response.hireable}}
         <span class="badge badge-primary badge-pill">1</span>
       </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center">
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngIf="response.name">
         Name: {{response.name}}
         <span class="badge badge-primary badge-pill">1</span>
       </li>
@@ -81,7 +73,6 @@
         <span class="badge badge-primary badge-pill">1</span>
       </li>
     </ul>
-
 
     <!-- REPOSITORIES -->
 
@@ -93,97 +84,9 @@
           <p class="card-text">{{reporesponse[i].description}}</p>
         </div>
       </div>
-      <!-- <div class="card border-secondary mb-3" style="max-width: 80rem;">
-        <div class="card-header">{{reporesponse[i].name}}</div>
-        <div class="card-body">
-          <h4 class="card-title">Secondary card title</h4>
-          <p class="card-text">{{reporesponse[i].description}}</p>
-        </div>
+
+
+      <div class="footer">
+        <p> Created By Melissa Malala &#169; August 2018.</p>
       </div>
-      <div class="card border-success mb-3" style="max-width: 80rem;">
-        <div class="card-header">{{reporesponse[i].name}}</div>
-        <div class="card-body">
-          <h4 class="card-title">Success card title</h4>
-          <p class="card-text">{{reporesponse[i].description}}</p>
-        </div>
-      </div>
-      <div class="card border-danger mb-3" style="max-width: 80rem;">
-        <div class="card-header">{{reporesponse[i].name}}</div>
-        <div class="card-body">
-          <h4 class="card-title">Danger card title</h4>
-          <p class="card-text">{{reporesponse[i].description}}.</p>
-        </div>
-      </div>
-      <div class="card border-warning mb-3" style="max-width: 80rem;">
-        <div class="card-header">{{reporesponse[i].name}}</div>
-        <div class="card-body">
-          <h4 class="card-title">Warning card title</h4>
-          <p class="card-text">{{reporesponse[i].description}}</p>
-        </div>
-      </div>
-      <div class="card border-info mb-3" style="max-width: 80rem;">
-        <div class="card-header">{{reporesponse[i].name}}</div>
-        <div class="card-body">
-          <h4 class="card-title">Info card title</h4>
-          <p class="card-text">{{reporesponse[i].description}}</p>
-        </div>
-      </div>
-      <div class="card border-light mb-3" style="max-width: 80rem;">
-        <div class="card-header">{{reporesponse[i].name}}</div>
-        <div class="card-body">
-          <h4 class="card-title">Light card title</h4>
-          <p class="card-text">{{reporesponse[i].description}}</p>
-        </div>
-      </div>
-      <div class="card border-dark mb-3" style="max-width: 80rem;">
-        <div class="card-header">{{reporesponse[i].name}}</div>
-        <div class="card-body">
-          <h4 class="card-title">Dark card title</h4>
-          <p class="card-text">{{reporesponse[i].description}}</p>
-        </div>
-      </div> -->
     </div>
-
-
-
-
-
-
-
-
-
-
-    <!--
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Repository: {{response.repos_url}}</a>
-    </p> -->
-
-
-    <!-- <div class="container">
-      <h3 style='color: rgba(0,0,0,0.6)'>View Repositories</h3> Repositories: <input type="text" placeholder="Enter Name Of Repository" [(ngModel)]="repoName">
-      <button (click)="searchrepo()">Search Repository</button>
-      <hr>
-      <div *ngFor="let repo of repos">
-        <div class="row">
-          <div class="col-md-12">
-            <h4 style="color: deepskyblue;">
-            <a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a>
-          </h4>
-            <p class="badge badge-warning">Description</p>
-            <p>{{repo.description}}</p>
-          </div>
-          <div class="col-md-12">
-            <p class="badge badge-info">{{repo.watchers}} Watchers</p>
-            <p class="badge badge-success">{{repo.forks}} Forks</p>
-            <p class="badge badge-secondary">{{repo.stargazers_count}} Stars</p>
-            <hr>
-          </div>
-        </div>
-      </div>
-    </div> -->
-  </div>
-
-  <div class="footer">
-    <p> Created By Melissa Malala &#169; August 2018.</p>
-  </div>
-</div>
