@@ -8,15 +8,9 @@ import { HttpClient } from '@angular/common/http';
 export class TestService {
 
   url: string = 'https://api.github.com/users/';
-  private userName: string = [] ;
+  private userName: string ;
   response: any;
-  // reporesponse: any;
   private apiKey: string = environment.apiKey;
-  // repoName: string = [];
-
-  // printToConsole(arg) {
-  //   console.log(arg);
-  // }
 
   constructor(public http: HttpClient) {
 console.log('hi');
@@ -26,7 +20,7 @@ this.userName = 'melisamalala';
 
      search() {
       return this.http.get( this.url + this.userName + '?accesstoken=' + this.apiKey);
-      this.response = response;
+      // this.response = response;
      }
 
 
@@ -37,7 +31,24 @@ this.userName = 'melisamalala';
 newUser(userName:string){
   this.userName= userName;
 }
-
-
-
-}
+//
+// let promise =new Promise((resolve,reject)=>{
+//         this.http.get(environment.apiKey).toPromise().then(response=>{
+//
+//             this.response.login=response.login
+//             this.response.login=reporesponse.name
+//
+//
+//
+//             resolve()
+//         },
+//         error=>{
+//                 this.quote.quote= "Try your search again"
+//                 this.quote.author= "Try your search one more time"
+//                 reject(error)
+//             }
+//         )
+//     })
+//
+//     return promise
+  }

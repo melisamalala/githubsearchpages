@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TestService } from '../test.service';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {environment} from '../environment.ts';
+import {HttpClient} from '@angular/common/http';
+import { environment } from './environments/environment';
 
 @Component({
   selector: 'app-user',
@@ -30,20 +30,12 @@ searchUser() {
 
 // searchRepo()
 
-
-
-
-
-
 this.apiservice.repoDisplay().subscribe(reporesponse => {
   console.log(reporesponse);
   this.reporesponse = reporesponse;
 });
 
 }
-
-
-
 
 ngOnInit() {
 }

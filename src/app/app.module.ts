@@ -7,7 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 // Defining Routes
 const routes: Routes = [
   {path: 'user', component: UserComponent},
-  {path: 'repository', component: RepositoryComponent},
+  // {path: 'repository', component: RepositoryComponent},
   {path: 'about', component: AboutComponent},
   {path:  '', redirectTo: '/user', pathMatch: 'full'},
   {path: '**', component: NotFoundComponent}
@@ -15,12 +15,13 @@ const routes: Routes = [
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
-import { RepositoryComponent } from './repository/repository.component';
+// import { RepositoryComponent } from './repository/repository.component';
 import { TestService } from './test.service';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {RoutingModule} from './routing/routing.module';
 import { DateCountPipe } from './date-count.pipe';
+import { HighlightDirective } from './highlight.directive';
 // import { ReversePipe } from './reverse.pipe';
 
 
@@ -28,10 +29,11 @@ import { DateCountPipe } from './date-count.pipe';
   declarations: [
     AppComponent,
     UserComponent,
-    RepositoryComponent,
+    // RepositoryComponent,
     AboutComponent,
     NotFoundComponent,
     DateCountPipe,
+    HighlightDirective,
     // ReversePipe,
   ],
   imports: [

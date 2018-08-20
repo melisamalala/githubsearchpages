@@ -20,24 +20,17 @@
   </div>
 </nav>
 
-
-
-
 <div class="container">
   <form class="search-form">
 
-
     <input type="text" placeholder="Enter Github Username" [(ngModel)]="userName" name="userName" (keyup)="searchUser()">
-
-
 
   </form>
 </div>
 
-
 <div class="jumbotron">
   <div *ngIf="response">
-    <h1 class="display-3"> Username: {{response.login}} </h1>
+    <h1 class="display-3" appHighlight> Username: {{response.login}} </h1>
     <p class="lead">Profile Picture
       <br>
       <br>
@@ -72,8 +65,16 @@
         Email: {{response.email}}
         <span class="badge badge-primary badge-pill">1</span>
       </li>
-    </ul>
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngIf="response.email">
+        Created at {{response.created_at}}
+        <span class="badge badge-primary badge-pill">1</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngIf="response.email">
+        Created at {{response.updated_at}}
+        <span class="badge badge-primary badge-pill">1</span>
+      </li>
 
+    </ul>
     <!-- REPOSITORIES -->
 
     <div *ngFor="let repo of reporesponse, let i=index">
@@ -84,8 +85,6 @@
           <p class="card-text">{{reporesponse[i].description}}</p>
         </div>
       </div>
-
-
       <div class="footer">
         <p> Created By Melissa Malala &#169; August 2018.</p>
       </div>
