@@ -33,7 +33,7 @@
     <p class="lead">Profile Picture
       <br>
       <br>
-      <img src="{{response.avatar_url}}"></p>
+      <img class="img-responsive profile-img img-thumbnail" src="{{response.avatar_url}}"></p>
     <ul class="list-group">
       <li class="list-group-item d-flex justify-content-between align-items-center">
         Company: {{response.company}}
@@ -46,15 +46,9 @@
       <li class="list-group-item d-flex justify-content-between align-items-center"> Location: {{response.location}}
         <span class="badge badge-primary badge-pill">1</span>
       </li>
-
-
-
       <li class="list-group-item d-flex justify-content-between align-items-center"> Public Repos: {{response.public_repos}}
         <span class="badge badge-primary badge-pill">View Repositories</span>
       </li>
-
-
-
       <li class="list-group-item d-flex justify-content-between align-items-center"> Public Gists: {{response.public_gists}}
         <span class="badge badge-primary badge-pill">1</span>
       </li>
@@ -75,10 +69,9 @@
         <span class="badge badge-primary badge-pill">June 2014</span>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center" *ngIf="response.updated_at">
-        Created at {{response.updated_at}}
+        Joined Github On: {{response.updated_at|date:short:timezone}}
         <span class="badge badge-primary badge-pill">August 2018</span>
       </li>
-
     </ul>
     <!-- REPOSITORIES -->
 
@@ -90,7 +83,10 @@
           <p class="card-text">{{reporesponse[i].description}}</p>
         </div>
       </div>
-      <div class="footer">
-        <p> Created By Melissa Malala &#169; August 2018.</p>
+      <div id="body">
+        <nav class="navbar navbar-dark bg-primary mt-5 fixed-bottom text-dark">
+          <div class="navbar-expand m-auto navbar-text text-dark">
+            Made by <a href="https://twitter.com/melisamalala">Melissa Malala</a>
+          </div>
+        </nav>
       </div>
-    </div>
