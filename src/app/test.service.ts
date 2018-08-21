@@ -17,18 +17,16 @@ console.log('hi');
 this.userName = 'melisamalala';
 
  }
-
      search() {
       return this.http.get( this.url + this.userName + '?accesstoken=' + this.apiKey);
       // this.response = response;
      }
 
-
  repoDisplay() {
   return this.http.get( this.url + this.userName + '/repos?accesstoken=' + this.apiKey);
  }
 
-newUser(userName:string){
+  newUser(userName:string){
   this.userName= userName;
 }
 //

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TestService } from '../test.service';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 
 @Component({
@@ -19,31 +19,74 @@ export class UserComponent implements OnInit {
   // repoName: string = [];
 
 
-  constructor ( public apiservice: TestService) {}
+  constructor ( public apiservice: TestService) {
 
-searchUser() {
- this.apiservice.newUser(this.userName);
- this.apiservice.search().subscribe(response => {
-  console.log(response);
-  this.response = response;
-});
 
-// searchRepo()
+    this.apiservice.search().subscribe(response => {
+          console.log(response);
+          this.response = response;
+        });
 
-this.apiservice.repoDisplay().subscribe(reporesponse => {
-  console.log(reporesponse);
-  this.reporesponse = reporesponse;
-});
+        this.apiservice.repoDisplay().subscribe(reporesponse => {
+          console.log(reporesponse);
+          this.reporesponse = reporesponse;
 
-}
+        });
+
+      }
+
+      searchUser() {
+        this.apiservice.newUser(this.userName);
+        this.apiservice.search().subscribe(response => {
+          console.log(response);
+          this.response = response;
+        });
+
+        this.apiservice.repoDisplay().subscribe(reporesponse => {
+          console.log(reporesponse);
+          this.reporesponse = reporesponse;
+
+        });
+      }
+
+//     ------ TEST -----
+//
+//  this.apiservice.newUser(this.userName);
+//  this.apiservice.search().subscribe(response => {
+//   console.log(response);
+//   this.response = response;
+// });
+//
+//
+// this.apiservice.repoDisplay().subscribe(reporesponse => {
+//   console.log(reporesponse);
+//   this.reporesponse = reporesponse;
+// });
+//
+// }
+//
+//
+// 
+//
+// searchUser() {
+//     this.apiservice.updateProfile(this.userName);
+//     this.apiservice.newUser().subscribe(response => {
+//       console.log(response);
+//       this.response = response;
+//     });
+//
+//     this.apiservice.repoDisplay().subscribe(reporesponse => {
+//       console.log(reporesponse);
+//       this.reporesponse = reporesponse;
+//
+//     });
+//   }
+//
+//
+//
+
 
 ngOnInit() {
 }
-    // repoDisplay() {
-    //   this.http.get( this.url + this.userName + '/repos?accesstoken=' + this.apiKey)
-    //   .subscribe((reporesponse) => {
-    //     this.reporesponse = reporesponse;
-    //     console.log(this.reporesponse);
-    //   });
-    // }
+
 }
