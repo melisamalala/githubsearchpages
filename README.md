@@ -22,7 +22,7 @@ A user can refresh the page by clicking on the header.
 ## Technical Requirements
 
 
-Placing of access key within the envionment.ts file and placing it within the .gitignore file
+Placing of access key within the environment.ts file and placing it within the .gitignore file
 
 Http service that uses a promise to make requests to GitHub Api.
 
@@ -59,7 +59,7 @@ If you encounter bugs, clone the repo, make a pull request or email me at meliss
 
 ## Technologies Used
  Angular 6
- Node - for Dependancy Management
+ Node - for Dependency Management
  Bootstrap
  CSS
  HTML
@@ -68,7 +68,7 @@ If you encounter bugs, clone the repo, make a pull request or email me at meliss
 You can reach out to me at melissamalala@gmail.com for Reviews, Advice, Collaborations and Comments.
 
 
-## Licence
+## License
 
 ## Copyright (c) 2018 Dev Melissa Malala
 
